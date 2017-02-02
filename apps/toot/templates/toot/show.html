@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Semi Restful</title>
+</head>
+<body>
+    <p>Favorite Products</p>
+    {% for prod in product%}
+    <p>Product#{{prod.id}}</p>
+    <p>Name:{{prod.name}}</p>
+    <p>Description:{{prod.description}}</p>
+    <p>Price:{{prod.price}}</p>
+    <a href="{% url 'products_edit' prod.id %}">Edit</a>
+    {% endfor %}
+</body>
+</html>
